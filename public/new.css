@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fb;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+.container {
+  background-color: white;
+  width: 380px;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+h3 {
+  color: #25364c;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8290a3;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Input fields */
+input,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #f9fbfe;
+  transition: 0.3s;
+}
+
+input {
+  margin-bottom: 18px;
+}
+
+textarea {
+  height: 120px;
+  margin-bottom: 18px;
+}
+/* while inputing values */
+input:focus,
+textarea:focus {
+  border-color: #7baee8;
+  background-color: white;
+  box-shadow: 0 0 0 3px #e4f1ff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa8b8;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background-color: #477fc4;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3569aa;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(71, 127, 196, 0.2);
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+}

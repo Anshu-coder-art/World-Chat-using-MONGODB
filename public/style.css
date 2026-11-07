@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fb;
+  font-family: Georgia, serif;
+  padding: 10px 40px 25px 40px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+h3 {
+  margin-top: 10px;
+  color: #202b40;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 > sub {
+  color: grey;
+  font-size: 16px;
+}
+
+/* Chat card */
+.chat {
+  background-color: #e4f1ff;
+  padding: 16px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  transition: 0.3s ease;
+}
+
+/* Sender and receiver */
+.chat > p {
+  font-size: 14px;
+  color: #25364c;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Message */
+.msg {
+  margin: 14px 0;
+}
+
+.msg p {
+  color: #25364c;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Divider */
+.chat hr {
+  border: none;
+  border-top: 1px solid #c7d3df;
+  margin: 12px 0;
+}
+
+/* Hover effect */
+.chat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.chat:nth-of-type(3n + 1) {
+  background-color: #e4f1ff;
+}
+
+.chat:nth-of-type(3n + 2) {
+  background-color: #fce9f0;
+}
+
+.chat:nth-of-type(3n + 3) {
+  background-color: #e8f6e9;
+}
+#receive {
+  color: grey;
+  font-weight: 100;
+}
+.newbutton {
+  background: white;
+  color: grey;
+  padding: 11px 25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.top-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  padding: 12px 60px;
+
+  background: rgba(244, 247, 251, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.3s ease;
+}
+.space {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  color: grey;
+}
+.edit > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}

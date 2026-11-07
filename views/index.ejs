@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Whatsapp</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/f81ad19c96.js"></script>
+  </head>
+  <body>
+    <div class="top-space">
+        <h3>World Chats<sub>(<%= length %>)</sub></h3>
+        <form method="get" action="/chats/new">
+            <button class="newbutton">New Chat</button>
+        </form>
+    </div>
+    <br>
+    <% for(let chat of chats){ %>
+        <div class="chat">
+            <div class="space">
+                <p>From: <%= chat.from %></p>
+                <div style="display: flex;">
+                    <form method="GET" action="/chats/<%= chat._id %>/edit" class="edit">
+                        <button><i type="button" class="fa-regular fa-pen-to-square"></i></button>
+                    </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE" class="edit" onsubmit="return confirmDelete()">
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="msg">
+                <p><%= chat.msg %></p>
+            </div>
+            <hr>
+            <div class="space">
+                <p id="receive">Reacived by: <%= chat.to %></p>
+                <p class="date">Last Updated: &nbsp;<%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %>&nbsp;&nbsp;<%= chat.created_at.toString().split(" ")[4] %></p>
+            </div>
+        </div>
+    <% } %>
+  </body>
+  <script src="/script.js"></script>
+</html>
+
+
