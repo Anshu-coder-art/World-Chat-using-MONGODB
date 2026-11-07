@@ -127,3 +127,9 @@ h3 > sub {
   cursor: pointer;
   font-size: 18px;
 }
+.fa-pen-to-square {
+  color: #3867d6;
+}
+.fa-trash-can {
+  color: #e05260;
+}

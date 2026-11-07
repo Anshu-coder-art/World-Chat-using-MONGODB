@@ -21,10 +21,10 @@
                 <p>From: <%= chat.from %></p>
                 <div style="display: flex;">
                     <form method="GET" action="/chats/<%= chat._id %>/edit" class="edit">
-                        <button><i type="button" class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
                     </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE" class="edit" onsubmit="return confirmDelete()">
-                        <button><i class="fa-solid fa-trash"></i></button>
+                        <button><i class="fa-solid fa-trash-can"></i></button>
                     </form>
                 </div>
             </div>
